@@ -1,11 +1,11 @@
-
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <h1 className="text-6xl font-mono w-full h-screen flex justify-center items-center bg-black text-white">
-    Hello world!
-  </h1>
-  )
+    <div className=" w-full h-screen  bg-zinc-900 text-white">
+      <Navbar />
+    </div>
+  );
 }
 
-export default App
+export default App;
