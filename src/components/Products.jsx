@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import Product from "./Product";
 
 function Products() {
@@ -40,8 +40,8 @@ function Products() {
     },
   ];
   return (
-    <div>
-      {products.map((val,index) => <Product val={val}/>)}
+    <div className="mt-32">
+      {products.map((val,index) => <Product key={index} val={val}/>)}
     </div>
   );
 }
