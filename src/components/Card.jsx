@@ -1,16 +1,23 @@
 // import React from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { motion } from "framer-motion";
 
-function Card({ width, start, para, hover }) {
+function Card({ width, start, para, hover = "false", header, title }) {
   return (
-    <div
-      className={` bg-zinc-800 p-5 rounded-xl hover:${hover} ${width} min-h-[30rem] flex flex-col justify-between`}
+    <motion.div
+      whileHover={{
+        backgroundColor: hover === "true" && "#7443ff",
+        padding: "25px",
+      }}
+      className={`bg-zinc-800 p-5 rounded-xl ${width} min-h-[30rem] flex flex-col justify-between`}
     >
-      <div className="w-full flex justify-between items-center">
-        <h3 className=""> ON Heading</h3>
-        <IoIosArrowRoundForward />
+      <div className="w-full ">
+        <div className="flex justify-between items-center">
+          <h3 className="">{header}</h3>
+          <IoIosArrowRoundForward />
+        </div>
+        <h1 className="text-3xl font-medium  mt-5">{title}</h1>
       </div>
-      <h1 className="text-3xl font-medium  mt-5">Wehatever heading.</h1>
       <div className="down w-full ">
         {start && (
           <>
@@ -23,10 +30,13 @@ function Card({ width, start, para, hover }) {
           </>
         )}
         {para && (
-          <p className="text-sm text-zinc-500 font-medium mt-5">lorem7</p>
+          <p className="text-sm text-zinc-500 font-medium mt-5">
+            {" "}
+            Explore what drives our team.
+          </p>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

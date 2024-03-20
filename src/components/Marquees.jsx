@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import Marquee from "./Marquee";
 
 function Marquees() {
@@ -29,9 +29,13 @@ function Marquees() {
     ],
   ];
   return (
-    <div className="py-20 mt-20">
-      {images.map((item,index) => (
-        <Marquee imgUrls={item} key={index}/>
+    <div className="py-20 mt-20 w-full relative overflow-hidden">
+      {images.map((item, index) => (
+        <Marquee
+          imgUrls={item}
+          direction={index === 0 ? "left" : "right"}
+          key={index}
+        />
       ))}
     </div>
   );
