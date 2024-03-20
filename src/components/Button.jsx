@@ -6,7 +6,7 @@ function Button({ title = "Get Started" }) {
     <>
       <div className="w-fit px-4 py-2 bg-zinc-100 text-black rounded-full cursor-pointer">
         <motion.div
-          initial={{ y: 0, opacity: 1 }}
+          initial={{ y: 0, opacity: 1 ,transition: { duration: 0.8}}}
           whileHover={{
             y: [-20, 0, 20],
             opacity: [0, 1, 0],
