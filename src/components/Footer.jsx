@@ -20,7 +20,7 @@ function Footer() {
           </div>
           <div className="basis-1/3">
             <h4 className="mb-10 text-zinc-500 capitalize">Sitemaps</h4>
-            {["home", "Work", "careers","contact"].map((item, index) => (
+            {["home", "Work", "careers", "contact"].map((item, index) => (
               <a className="block mt-2 text-zinc-200 capitalize" key={index}>
                 {item}
               </a>
@@ -31,7 +31,10 @@ function Footer() {
               Refokus is pioneering digital agency driven by design and
               empowered by technology.
             </p>
-            <img className="w-24 px-4 py-1 mt-8 bg-blue-600 " src="https://assets-global.website-files.com/6334198f239547d0f9cd84b3/63349803431f1562dccf1802_refokus%20logo.svg" />
+            <img
+              className="w-24 px-4 py-1 mt-8 bg-blue-600 "
+              src="https://assets-global.website-files.com/6334198f239547d0f9cd84b3/63349803431f1562dccf1802_refokus%20logo.svg"
+            />
           </div>
         </div>
       </div>

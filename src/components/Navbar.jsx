@@ -13,7 +13,11 @@ const Navbar = () => {
             elem.length === 0 ? (
               <span className="w-[2px] h-7 bg-zinc-800 " key="i++"></span>
             ) : (
-              <a className="text-sm items-center flex gap-1 font-regular" href="#" key="i++">
+              <a
+                className="text-sm items-center flex gap-1 font-regular"
+                href="#"
+                key={index}
+              >
                 {index === 1 && (
                   <span
                     style={{ boxShadow: "0 0 0.45em #00FF19" }}
@@ -27,7 +31,7 @@ const Navbar = () => {
           )}
         </div>
       </div>
-      <Button/>
+      <Button />
     </div>
   );
 };
